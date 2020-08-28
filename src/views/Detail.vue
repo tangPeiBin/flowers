@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="box"> 
         <div class="topbar">
             <div class="topmenu">
                 <router-link to="/">
@@ -73,6 +73,10 @@
     </div>
 </template>
 <style scoped>
+.box{
+    width:375px;
+    margin:0 auto;
+}
 /*顶部样式*/
 .topbar{
   width:100%;

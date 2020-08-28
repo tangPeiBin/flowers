@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="box">
         <my-topbar></my-topbar>
         <div class="buycart">
             <div v-if="carts.length">
@@ -58,6 +58,10 @@
     </div>
 </template>
 <style scoped>
+.box{
+    width:375px;
+    margin:0 auto;
+}
 /* 空的购物车 */
 .m-defaultPage-noCart {
     background: #f4f4f4;

@@ -41,7 +41,8 @@
 <style scoped>
 /*顶部样式*/
 .topbar{
-  width:100%;
+  width:375px;
+  margin:0 auto;
   height:3rem;
   background:#fafafa;
 }

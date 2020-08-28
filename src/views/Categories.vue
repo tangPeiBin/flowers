@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="box">
         <header>
             <img src="../assets/logo.png" alt="">
             <div>
@@ -17,11 +17,13 @@
             <h2 class="title">鲜花</h2>
             <ul class="lists">
                 <li v-for="(v,k) of lists" :key="k">
-                    <div class="lists-info">
-                        <img :src="v.image" alt="">
-                        <p class="price">￥{{v.price_online}} <del>门店价:{{v.price_offline}}</del> </p>
-                    </div>
-                    <div v-text="v.title" class="name"></div>
+                    <router-link :to="'/detail/'+v.fid">
+                        <div class="lists-info">
+                            <img :src="v.image" alt="">
+                            <p class="price">￥{{v.price_online}} <del>门店价:{{v.price_offline}}</del> </p>
+                        </div>
+                        <div v-text="v.title" class="name"></div>
+                    </router-link>
                 </li>
             </ul>
             <my-tabbar></my-tabbar>
@@ -29,6 +31,10 @@
     </div>
 </template>
 <style scoped>
+.box{
+    width:375px;
+    margin:0 auto;
+}
 /* 顶部样式 */
 header{
     height:45px;
